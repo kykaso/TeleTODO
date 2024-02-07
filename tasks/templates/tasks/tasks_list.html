@@ -1,18 +1,21 @@
 {% extends "tasks/base.html" %}
 {% block content %}
+
     <div class="center">
-        {% if taskslist %}
-            <ul class="tasklist">
+        <h2>Lists</h2>
+        {% if tasks_list %}
+            <ul class="task_list">
             {% for task in tasks_list %}
-                        <li><a href="{% url 'task' task.id %}"
-                               class="{% if task.completed %}completed{% endif %}">{{ task.title }}</a>
-                            <div class="task-controls">
-                                <a href=" {% url 'delete-tasks' task.id %}"><i class="bi bi-trash"></i> </a>
-                            </div>
-                        </li>
+                <li><a href="{% url 'task' task.id %}"
+                       class="{% if task.completed %}completed{% endif %}">{{ task.title }}</a>
+                    <div class="task-controls">
+                        <a href="{% url 'delete-tasks' task.id %}"><i class="bi bi-trash"></i> </a>
+                        <a href="#"><i class="bi bi-pencil-square"></i></a>
+                    </div>
+                </li>
             {% endfor %}
         {% else %}
-            <p>🎉Иди нахуй 🤷‍♀️ <a href="{%url 'create-tasks'%}">Create Task</a></p>
+            <p>🤷‍♀️ 🎉Иди нахуй 🎉 🤷‍♀️ <a href="{% url 'create-tasks' %}" class="center">Create Task</a></p>
         {% endif %}
         </ul>
     </div>

@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, DeleteView
+from django.views.generic import ListView, CreateView, DeleteView, DetailView
 
 from .models import Tasks
 
@@ -21,7 +21,8 @@ def index(request):
 class TaskDelete(DeleteView):
     model = Tasks
     context_object_name = 'task'
-    success_url = reverse_lazy('taskslist')
+    template_name = "tasks/task_confirm_delete.html"
+    success_url = reverse_lazy('tasks_list')
 
     def form_valid(self, form):
         messages.success(self.request, "Успешно удалено")
@@ -31,9 +32,14 @@ class TaskDelete(DeleteView):
 class TasksCreate(CreateView):
     model = Tasks
     fields = ['title', 'description']
-    success_url = reverse_lazy('taskslist')
+    success_url = reverse_lazy('tasks_list')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         messages.success(self.request, "Таск был успешно создан.")
         return super(TasksCreate, self).form_valid(form)
+
+
+class TaskDetail(DetailView):
+    model = Tasks
+    context_object_name = 'task'
