@@ -30,7 +30,7 @@ class TaskDeleteView(DeleteView):
 class TasksCreate(CreateView):
     model = Tasks
     fields = ['title', 'description']
-    success_url = reverse_lazy('tasks')
+    success_url = reverse_lazy('taskslist')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
