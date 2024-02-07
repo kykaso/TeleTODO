@@ -5,21 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 </head>
 
 <body>
 <header class="header">
     <div class="container">
-        <style>
-            .center {
-                text-align: center;
-            }
-        </style>
         <nav class="nav">
             <a href="{% url 'taskslist' %}"><i class="bi bi-house-fill"></i> tasklist</a>
             <div class="center">
-                <input class="form-control mr-sm-4" type="" placeholder="Enter your code" >
+                <label>
+                    <input class="form-control mr-sm-4" placeholder="Enter your code">
+                </label>
                 <a href="{% url 'create-tasks' %}"><i class="bi bi-plus-circle"></i>
                     <button class="btn" type="submit">Create note</button>
                 </a>
