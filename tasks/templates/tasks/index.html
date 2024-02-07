@@ -1,0 +1,59 @@
+{% extends 'tasks/base.html' %}
+
+function renderCards(cards) {
+const cardListElement = document.querySelector('.card-list');
+
+let renderedCardsHtml = ''
+
+for (let i = 0; i < cards.length; i++) {
+renderedCardsHtml += `
+<div class="item">
+    <div class="item__info">
+        <div class="item__text">
+            ${cards[i].content}
+        </div>
+
+        <div class="item__date">
+            ${cards[i].created_at}
+        </div>
+    </div>
+
+    <div class="item__action">
+        <div>
+            <button type="button">
+                <img alt=""
+                     src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/trash-512.png"
+                     width="16"/>
+            </button>
+        </div>
+
+        ${cards[i].is_completed ? '
+        <div>
+            <button type="button"><img alt=""
+                                       src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/checkmark-24-512.png"
+                                       width="16"/></button>
+        </div>
+        ' : ''}
+    </div>
+</div>`
+}
+
+cardListElement.innerHTML = renderedCardsHtml
+}
+
+// пример вызова этой функции, когда ты уже получил карточки из API:
+// но здесь данные - просто пример
+renderCards([
+{
+id: 1,
+content: 'Горсть яблок из 128',
+created_at: new Date(),
+is_completed: false
+},
+{
+id: 2,
+content: 'Горсть яблок из 128',
+created_at: new Date(),
+is_completed: true
+}
+])

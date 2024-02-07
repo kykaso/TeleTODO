@@ -1,0 +1,11 @@
+{% extends "tasks/base.html" %}
+
+{% block content %}
+    <h1>title</h1>
+
+    <form method="post">
+    {% csrf_token %}
+    <p>Вы уверены что хотите удалить задачу "{{ object.title }}"?</p>
+    <input type="submit"value="Удалить">
+    </form>
+{% endblock %}
