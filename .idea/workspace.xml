@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3431d294-fd13-41a6-9879-f71f11485ae6" name="Changes" comment="Версия 1.0.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    <list default="true" id="3431d294-fd13-41a6-9879-f71f11485ae6" name="Changes" comment="Версия 1.0.3">
       <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/tasks_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/tasks_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +109,7 @@
       <updated>1707234403441</updated>
       <workItem from="1707234464358" duration="15939000" />
       <workItem from="1707299614409" duration="5280000" />
-      <workItem from="1707327478301" duration="9653000" />
+      <workItem from="1707327478301" duration="11162000" />
     </task>
     <task id="LOCAL-00001" summary="Версия 1">
       <option name="closed" value="true" />
@@ -133,7 +127,39 @@
       <option name="project" value="LOCAL" />
       <updated>1707339257438</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Версия 1.0.">
+      <option name="closed" value="true" />
+      <created>1707342615341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707342615341</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Версия 1.0.2">
+      <option name="closed" value="true" />
+      <created>1707342637192</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707342637192</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Версия 1.0.2">
+      <option name="closed" value="true" />
+      <created>1707343424664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707343424664</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Версия 1.0.3">
+      <option name="closed" value="true" />
+      <created>1707343443863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707343443863</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +168,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Версия 1" />
     <MESSAGE value="Версия 1.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Версия 1.0.1" />
+    <MESSAGE value="Версия 1.0.2" />
+    <MESSAGE value="Версия 1.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Версия 1.0.3" />
   </component>
 </project>

@@ -1,26 +1,19 @@
 {% extends "tasks/base.html" %}
 {% block content %}
     <div class="center">
-{#        {% if tasks %}#}
-            <ul class="task">
-            {% for tasks in tasks_list %}
-                <div class="list-group">
-                    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{ tasks.title }}</h5>
-                            <small>{{ tasks.date_created }}</small>
-                        </div>
-{#                        <li><a href="{% url 'taskslist' tasks_list.id %}"#}
+        {% if taskslist %}
+            <ul class="tasklist">
+            {% for task in tasks_list %}
+                        <li><a href="{% url 'task' task.id %}"
                                class="{% if task.completed %}completed{% endif %}">{{ task.title }}</a>
                             <div class="task-controls">
-                                <a href=" {% url 'delete-tasks' tasks.id %}"><i class="bi bi-trash"></i> </a>
+                                <a href=" {% url 'delete-tasks' task.id %}"><i class="bi bi-trash"></i> </a>
                             </div>
-{#                        </li>#}
-                        <p class="mb-1">{{ tasks.description }}</p>
-                    </a>
-                </div>
+                        </li>
             {% endfor %}
-{#        {% endif %}#}
+        {% else %}
+            <p> 🤷‍♀️ 🎉Иди нахуй 🎉 🤷‍♀️ <a href="{%url 'create-tasks'%}" class="center" >Create Task</a></p>
+        {% endif %}
         </ul>
     </div>
 {% endblock content %}
