@@ -20,12 +20,13 @@ def index(request):
 
 class TaskDelete(DeleteView):
     model = Tasks
-    context_object_name = 'tasks'
+    context_object_name = 'task'
     success_url = reverse_lazy('taskslist')
 
     def form_valid(self, form):
         messages.success(self.request, "Успешно удалено")
-        return super(TaskDelete,self).form_valid(form)
+        return super(TaskDelete, self).form_valid(form)
+
 
 class TasksCreate(CreateView):
     model = Tasks
